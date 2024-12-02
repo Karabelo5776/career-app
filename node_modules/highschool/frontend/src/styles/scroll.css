@@ -1,0 +1,95 @@
+/* scroll.css */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button-hover);
+}
+
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--primary-bg);
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations for elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.university-card {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.loading {
+  animation: shimmer 1s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--card-bg) 8%,
+    var(--border-color) 18%,
+    var(--card-bg) 33%
+  );
+  background-size: 800px 104px;
+}
+
+/* Form transitions */
+input, select, button {
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  transform: translateY(-2px);
+}
+
+/* Modal animations */
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Table row hover effect */
+tbody tr {
+  transition: var(--transition);
+}
+
+tbody tr:hover {
+  background: rgba(74, 144, 226, 0.1);
+}
+
+/* Button press effect */
+button:active {
+  transform: scale(0.98);
+}
+
+
